@@ -9,6 +9,9 @@ import { AddDepComponent } from './department/add-dep/add-dep.component';
 import { SharedService } from './shared.service';
 import {HttpClientModule} from '@angular/common/http';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { EmployeeComponent } from './employee/employee.component';
+import { ShowEmpComponent } from './employee/show-emp/show-emp.component';
+import { AddEmpComponent } from './employee/add-emp/add-emp.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +19,9 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
     DepartmentComponent,
     DisplayDepComponent,
     AddDepComponent,
+    EmployeeComponent,
+    ShowEmpComponent,
+    AddEmpComponent,
     
   ],
   imports: [
