@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -10,39 +11,39 @@ export class SharedService {
   constructor(private http:HttpClient) { }
 
   GetDepartment():Observable<any>{
-    return this.http.get<any[]>(this.APIUrl+ '/department/');
+    return this.http.get<any[]>(this.APIUrl+ '/Department/');
   }
 
   AddDepartmet(val:any){
-    return this.http.post(this.APIUrl+'/department/',val);
+    return this.http.post(this.APIUrl+'/Department/',val);
   }
 
 
   UpdateDeprtment(val:any){
-    return this.http.put(this.APIUrl+'/department/',val);
+    return this.http.put(this.APIUrl+'/Department/',val);
   }
 
 
   DeleteDepartment(val:any){
-    return this.http.delete(this.APIUrl+'/department/',val);
+    return this.http.delete(this.APIUrl+'/Department/',val);
   }
 
   
   GetEmployeee():Observable<any>{
-    return this.http.get<any[]>(this.APIUrl+ '/Employee/');
+    return this.http.get<any[]>(this.APIUrl+'/EmployeeAPI/');
   }
 
   AddEmployee(val:any){
-    return this.http.post(this.APIUrl+'/Employee/',val);
+    return this.http.post(this.APIUrl+'/EmployeeAPI/',val);
   }
 
 
   UpdateEmployee(val:any){
-    return this.http.put(this.APIUrl+'/Employee/',val);
+    return this.http.put(this.APIUrl+'/EmployeeAPI/',val);
   }
 
 
   DeleteEmployee(val:any){
-    return this.http.delete(this.APIUrl+'/Employee/',val);
+    return this.http.delete(this.APIUrl+'/EmployeeAPI/',val);
   }
 }
